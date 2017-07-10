@@ -1,0 +1,13 @@
+{% extends 'patient/base.html' %}
+
+{% block body %}
+<h1>Name: {{ patient.name }}</h1>
+<h3>Sex: {{ patient.sex }}</h3>
+<h3>Age: {{ patient.age }}</h3>
+<h3>Problem: {{ patient.problem }}</h3>
+<img src="{{ patient.report.url }}" class="img-responsive">
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong</p>
+{% endif %}
+{% endblock %}
